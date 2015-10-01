@@ -117,7 +117,7 @@ namespace ofxIlda {
         void draw(float x, float y, float w, float h) {
             ofNoFill();
             ofSetColor(255);
-            ofDrawRectangle(x, y, w, h);
+			ofRect(x, y, w, h);
             
             if(params.draw.fbo) {
                 ofSetColor(params.draw.fboAlpha);

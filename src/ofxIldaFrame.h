@@ -354,6 +354,25 @@ namespace ofxIlda {
                     
                 }
             }
+#if 1
+			// for debug
+			points.clear();
+			ofPoint pt_begin(0.f, 0.f);
+			ofPoint pt_end(1.f, 1.f);
+			ofFloatColor pt_color(1.f, 1.f, 1.f);
+			ofFloatColor blank_color(0.f, 0.f, 0.f);
+			int num = 15;
+			for (int i=0; i<num; i++)
+				points.push_back(Point(pt_begin, blank_color));
+			for (int i=0; i<num; i++)
+				points.push_back(Point(pt_begin, pt_color));
+			points.push_back(Point(pt_begin, pt_color));
+			points.push_back(Point(pt_end, pt_color));
+			for (int i=0; i<num; i++)
+				points.push_back(Point(pt_end, pt_color));
+			for (int i=0; i<num; i++)
+				points.push_back(Point(pt_end, blank_color));
+#endif
         }
         
     protected:
